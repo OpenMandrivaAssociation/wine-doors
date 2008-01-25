@@ -19,6 +19,7 @@ BuildRequires: wine
 BuildRequires: cabextract
 BuildRequires: desktop-file-utils
 BuildArch: noarch
+ExclusiveArch:  %{ix86}
 
 %description
 Wine doors is an application designed to assist users in obtaining, installing,
