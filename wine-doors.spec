@@ -5,6 +5,7 @@ Release: %mkrel 1
 Summary: Graphical wine frontend
 License: GPL
 Group:   Emulators
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:     http://www.wine-doors.org
 Source:  wine-doors-%{version}.tar.gz
 
