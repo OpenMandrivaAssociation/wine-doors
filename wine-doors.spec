@@ -1,6 +1,6 @@
 Name:    wine-doors
 Version: 0.1.2
-Release: %mkrel 3
+Release: %mkrel 4
 
 Summary: Graphical wine frontend
 License: GPL
