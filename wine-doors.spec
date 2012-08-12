@@ -1,26 +1,24 @@
-Name:    wine-doors
-Version: 0.1.2
-Release: %mkrel 4
+Name:		wine-doors
+Version:	0.1.2
+Release:	5
 
-Summary: Graphical wine frontend
-License: GPL
-Group:   Emulators
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-URL:     http://www.wine-doors.org
-Source:  wine-doors-%{version}.tar.gz
+Summary:	Graphical wine frontend
+License:	GPL
+Group:		Emulators
+URL:		http://www.wine-doors.org
+Source0:	wine-doors-%{version}.tar.gz
 
-Requires: libxml2-python, python, pygtk2.0, pygtk2.0-libglade
-Requires: gnome-python-desktop
-Requires: cabextract
-Requires: python-cairo python-mate-rsvg python-mate-rsvg
-Requires: wine
-BuildRequires: python, pygtk2.0, pygtk2.0-libglade
-BuildRequires: gnome-python-desktop
-BuildRequires: wine
-BuildRequires: cabextract
-BuildRequires: desktop-file-utils
-BuildArch: noarch
-ExclusiveArch:  %{ix86}
+Requires:	libxml2-python python pygtk2.0 pygtk2.0-libglade
+Requires:	python-cairo python-mate-rsvg python-mate-rsvg
+Requires:	gnome-python-desktop
+Requires:	cabextract
+Requires:	wine
+BuildRequires:	python pygtk2.0 pygtk2.0-libglade
+BuildRequires:	gnome-python-desktop
+BuildRequires:	wine
+BuildRequires:	cabextract
+BuildRequires:	desktop-file-utils
+BuildArch:	noarch
 
 %description
 Wine doors is an application designed to assist users in obtaining, installing,
@@ -35,8 +33,7 @@ from the user interface used to install the applications.
 %build
 
 %install
-mkdir -p $RPM_BUILD_ROOT
-python setup.py install --sysinstall --root=$RPM_BUILD_ROOT
+python setup.py install --sysinstall --root=%{buildroot}
 
 # fix menu
 desktop-file-install \
@@ -44,13 +41,9 @@ desktop-file-install \
   --remove-category="Wine" \
   --add-category="GNOME" \
   --add-category="X-MandrivaLinux-MoreApplications-Emulators" \
-  --dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
-
-%clean
-rm -rf $RPM_BUILD_ROOT
+  --dir %{buildroot}%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
 
 %files
-%defattr(-,root,root)
 %doc LICENSE README
 %{_bindir}/wine-doors
 %{_datadir}/wine-doors/*
