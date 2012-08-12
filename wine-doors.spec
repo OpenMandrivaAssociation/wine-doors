@@ -3,7 +3,7 @@ Version:	0.1.2
 Release:	5
 
 Summary:	Graphical wine frontend
-License:	GPL
+License:	GPLv2+
 Group:		Emulators
 URL:		http://www.wine-doors.org
 Source0:	wine-doors-%{version}.tar.gz
