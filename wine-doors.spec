@@ -12,7 +12,7 @@ Source:  wine-doors-%{version}.tar.gz
 Requires: libxml2-python, python, pygtk2.0, pygtk2.0-libglade
 Requires: gnome-python-desktop
 Requires: cabextract
-Requires: python-cairo
+Requires: python-cairo python-mate-rsvg python-mate-rsvg
 Requires: wine
 BuildRequires: python, pygtk2.0, pygtk2.0-libglade
 BuildRequires: gnome-python-desktop
