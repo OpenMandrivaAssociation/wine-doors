@@ -6,7 +6,7 @@ Summary: Graphical wine frontend
 License: GPL
 Group:   Emulators
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-URL:     http://www.wine-doors.org
+URL:     https://www.wine-doors.org
 Source:  wine-doors-%{version}.tar.gz
 
 Requires: libxml2-python, python, pygtk2.0, pygtk2.0-libglade
